@@ -1,0 +1,41 @@
+{
+  "name": "@entva/config",
+  "description": "Shared config for universal JavaScript apps",
+  "author": "Max Degterev <max@degterev.me>",
+  "license": "MIT",
+  "readmeFilename": "README.md",
+  "repository": "entva/config",
+  "bugs": "https://github.com/entva/config/issues",
+  "version": "1.0.0",
+  "keywords": [
+    "config",
+    "universal",
+    "express",
+    "webpack"
+  ],
+  "main": "index.js",
+  "files": [
+    "plugin/*.js",
+    "index.js",
+    "utils.js"
+  ],
+  "scripts": {
+    "reinstall": "rm -rf node_modules package-lock.json && npm install",
+    "lint": "eslint ./",
+    "prepublishOnly": "npm test && npm run lint && echo \"\\033[0;32mReady to publish\\033[0m\"",
+    "test": "node test.js"
+  },
+  "devDependencies": {
+    "chai": "^4.3.7",
+    "eslint": "^8.46.0",
+    "eslint-config-entva-base": "^1.0.0",
+    "mocha": "^10.2.0"
+  },
+  "dependencies": {
+    "debug": "^4.1.1",
+    "lodash.defaults": "^4.2.0",
+    "lodash.merge": "^4.6.2",
+    "schema-utils": "^4.2.0",
+    "serialize-javascript": "^6.0.1"
+  }
+}
